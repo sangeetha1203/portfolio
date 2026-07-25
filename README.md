@@ -25,5 +25,5 @@ This portfolio showcases my software development and AI projects, technical skil
 - YouTube Transcript Summarizer
 
 ## Contact
-- LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN
+- LinkedIn:https://www.linkedin.com/in/sangeetha-r-78a70b2b2
 - GitHub: https://github.com/sangeetha1203
