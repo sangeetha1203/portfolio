@@ -38,3 +38,49 @@
         border-radius:20px;
     }
 }
+
+/* ==========================================================
+   MOBILE PERFORMANCE
+   backdrop-filter (the frosted-glass blur) is one of the most
+   GPU-expensive CSS properties there is, and this site uses it
+   on 25+ elements per page (every card, the navbar, every
+   modal). On mobile GPUs, compositing that many blurred layers
+   while scrolling is a major cause of dropped frames / "stuck"
+   scrolling. Disabling it below tablet width and relying on
+   the already-fairly-opaque background color keeps every card
+   just as readable without the compositing cost.
+========================================================== */
+
+@media(max-width:768px){
+
+    .glass,
+    #navbar,
+    .nav-links,
+    .project-tabs,
+    .modal-overlay,
+    .floating{
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+    }
+
+    .glass{
+        background:rgba(255,255,255,.92);
+    }
+
+    .project-tabs{
+        background:rgba(255,255,255,.95);
+    }
+
+    .modal-overlay{
+        background:rgba(15,23,42,.65);
+    }
+
+    .mouse-glow{
+        display:none;
+    }
+
+    .blob{
+        filter:blur(50px);
+        animation:none;
+    }
+}

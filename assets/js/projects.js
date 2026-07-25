@@ -33,7 +33,7 @@
   // fails to load (path given but file not added yet).
   function mediaHTML(src, label) {
     if (!src) return placeholder(label);
-    return `<img src="${src}" alt="${label}" class="story-img" data-fallback-label="${label}">`;
+    return `<img src="${src}" alt="${label}" class="story-img" loading="lazy" decoding="async" data-fallback-label="${label}">`;
   }
 
   function wireImageFallbacks(scope) {
@@ -54,10 +54,8 @@
       btns.push(`<a href="${p.repository.url || '#'}" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>`);
     }
 
-    if (p.demo.available) {
-      btns.push(`<a href="${p.demo.url || '#'}" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>`);
-    } else if (p.repository.type !== "private") {
-      btns.push(`<a href="#contact" class="btn btn-secondary contact-scroll"><i class="fas fa-comment-dots"></i> Contact Me</a>`);
+    if (p.repository.type !== "private") {
+      btns.push(`<a href="#contact" class="btn btn-primary contact-scroll"><i class="fas fa-comment-dots"></i> Contact Me</a>`);
     }
 
     return btns.join("");

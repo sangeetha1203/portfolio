@@ -26,10 +26,22 @@
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });
-    gsap.ticker.lagSmoothing(0);
 
+    // Note: lagSmoothing is intentionally left at GSAP's default
+    // rather than disabled. It's the safety valve that lets the
+    // browser skip a frame gracefully under load instead of
+    // stacking up work — disabling it made mobile jank worse,
+    // not better, whenever something else (images decoding,
+    // canvas redraw) briefly held up the main thread.
+
+    let ticking = false;
     lenis.on("scroll", () => {
-      if (typeof ScrollTrigger !== "undefined") ScrollTrigger.update();
+      if (ticking || typeof ScrollTrigger === "undefined") return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ScrollTrigger.update();
+        ticking = false;
+      });
     });
   } else {
     // Fallback if GSAP hasn't loaded for some reason
