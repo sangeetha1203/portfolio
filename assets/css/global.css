@@ -1,0 +1,845 @@
+/* ===========================================================
+   GLOBAL.CSS
+   Portfolio Foundation
+   Author : Sangeetha
+=========================================================== */
+
+/* ===========================================================
+   GOOGLE FONTS
+=========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+/* ===========================================================
+   CSS RESET
+=========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    /* Smooth scrolling is handled by Lenis (assets/js/main.js).
+       Native scroll-behavior:smooth is intentionally left off —
+       having both fight over the scroll position is what causes
+       stuttering/"stuck" scrolling. */
+}
+
+body{
+
+    background:#F7F9FF;
+    color:#10131C;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+/* ===========================================================
+   ROOT VARIABLES
+=========================================================== */
+
+:root{
+
+    /* Colors */
+
+    --bg:#F7F9FF;
+
+    --bg2:#FDF2F8;
+
+    --card:rgba(255,255,255,.75);
+
+    --card-border:rgba(31,41,66,.10);
+
+    --primary:#2F6FED;
+
+    --secondary:#EC4899;
+
+    --accent:#DB2777;
+
+    --white:#10131C;
+
+    --text:#5B6472;
+
+    --danger:#EF4444;
+
+    --success:#10B981;
+
+    --shadow:0 20px 50px rgba(31,41,66,.10);
+
+    --blur:blur(18px);
+
+    /* Radius */
+
+    --radius-sm:8px;
+
+    --radius-md:15px;
+
+    --radius-lg:25px;
+
+    --radius-xl:40px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}
+
+/* ===========================================================
+   SELECTION
+=========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===========================================================
+   SCROLLBAR
+=========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F0F2F9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+/* ===========================================================
+   TYPOGRAPHY
+=========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-weight:700;
+
+    color:var(--white);
+
+}
+
+h1{
+
+    font-size:clamp(3rem,8vw,5.8rem);
+
+}
+
+h2{
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+}
+
+h3{
+
+    font-size:1.7rem;
+
+}
+
+p{
+
+    color:var(--text);
+
+    font-size:1rem;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ===========================================================
+   SECTION
+=========================================================== */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:110px 8%;
+
+}
+
+/* ===========================================================
+   CONTAINER
+=========================================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ===========================================================
+   GLASS CARD
+=========================================================== */
+
+.glass{
+
+    background:var(--card);
+
+    backdrop-filter:var(--blur);
+
+    border:1px solid var(--card-border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================================================
+   BUTTON
+=========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 32px;
+
+    border-radius:100px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 25px var(--primary);
+
+}
+
+.btn-secondary{
+
+    background:transparent;
+
+    border:2px solid var(--primary);
+
+    color:var(--white);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===========================================================
+   FLEX
+=========================================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ===========================================================
+   GRID
+=========================================================== */
+
+.grid{
+
+    display:grid;
+
+}
+
+/* ===========================================================
+   TEXT
+=========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-gradient{
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ===========================================================
+   SHADOW
+=========================================================== */
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================================================
+   IMAGE
+=========================================================== */
+
+.round{
+
+    border-radius:50%;
+
+}
+
+/* ===========================================================
+   HIDDEN
+=========================================================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===========================================================
+   SPACING
+=========================================================== */
+
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mt-5{margin-top:50px;}
+
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+.mb-5{margin-bottom:50px;}
+
+/* ===========================================================
+   LOADER
+=========================================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#F7F9FF;
+
+    z-index:99999;
+
+}
+
+/* ===========================================================
+   CURSOR
+=========================================================== */
+
+@media (hover:hover) and (pointer:fine){
+
+    body,
+    a,
+    button{
+        cursor:none;
+    }
+}
+
+.cursor-dot,
+.cursor-outline{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:9999;
+
+    display:none;
+
+}
+
+@media (hover:hover) and (pointer:fine){
+
+    .cursor-dot,
+    .cursor-outline{
+        display:block;
+    }
+}
+
+.cursor-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    transition:transform .2s ease, opacity .2s ease;
+
+}
+
+.cursor-outline{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    border:2px solid var(--primary);
+
+    transition:width .25s ease, height .25s ease, border-color .25s ease, opacity .25s ease;
+
+}
+
+.cursor-outline.cursor-hover{
+
+    width:64px;
+
+    height:64px;
+
+    border-color:var(--secondary);
+
+    background:rgba(236,72,153,.06);
+
+}
+
+.cursor-dot.cursor-hover{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(0);
+
+}
+
+.cursor-outline.cursor-click{
+
+    width:32px;
+
+    height:32px;
+
+}
+
+/* ===========================================================
+   CANVAS
+=========================================================== */
+
+canvas{
+
+    display:block;
+
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media(max-width:992px){
+
+    section{
+
+        padding:90px 6%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:3rem;
+
+    }
+
+    h2{
+
+        font-size:2.2rem;
+
+    }
+
+    section{
+
+        padding:80px 5%;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* ===========================================================
+   LOADING SCREEN
+=========================================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F7F9FF;
+
+    z-index:99999;
+
+    transition:opacity .8s ease,
+               visibility .8s ease;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-content{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+.loader-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:2px solid transparent;
+
+    animation:rotate 8s linear infinite;
+
+}
+
+.ring1{
+
+    width:220px;
+
+    height:220px;
+
+    border-top-color:var(--primary);
+
+}
+
+.ring2{
+
+    width:170px;
+
+    height:170px;
+
+    top:25px;
+
+    left:25px;
+
+    border-right-color:var(--secondary);
+
+    animation-direction:reverse;
+
+}
+
+.ring3{
+
+    width:120px;
+
+    height:120px;
+
+    top:50px;
+
+    left:50px;
+
+    border-left-color:var(--accent);
+
+}
+
+.loader-logo{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:65px auto 20px;
+
+    font-size:2.3rem;
+
+    font-weight:700;
+
+    color:white;
+
+    box-shadow:0 0 35px rgba(47,111,237,.35);
+
+}
+
+.loader-name{
+
+    font-size:2rem;
+
+    margin-top:20px;
+
+}
+
+.loader-role{
+
+    margin-top:10px;
+
+    color:var(--text);
+
+}
+
+.loader-progress{
+
+    width:320px;
+
+    margin:35px auto 0;
+
+}
+
+.loader-bar{
+
+    width:100%;
+
+    height:8px;
+
+    background:rgba(31,41,66,.08);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+#loader-fill{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+#loader-percent{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-size:1rem;
+
+    color:var(--white);
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .loader-progress{
+
+        width:260px;
+
+    }
+
+    .loader-name{
+
+        font-size:1.6rem;
+
+    }
+
+}
+/* ==========================================================
+   RESPONSIVE GRID/FLEX SHRINK FIX
+   Grid and flex items default to min-width:auto, which stops
+   them shrinking below their content's intrinsic width even
+   when their track/container is narrower (a well-known CSS
+   gotcha). This was causing text-heavy panels (hero, about,
+   project story blocks, modals) to overflow their container
+   on narrow screens even though the grid itself was correctly
+   sized. Restoring min-width:0 lets them shrink and wrap
+   properly at every breakpoint.
+========================================================== */
+
+.about-grid > *,
+.story-block > *,
+.modal-box > *,
+.experience-grid > *,
+.skills-grid > *,
+.design-grid > *,
+.blog-carousel > *{
+
+    min-width:0;
+
+}

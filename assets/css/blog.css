@@ -1,0 +1,352 @@
+/* ==========================================================
+   BLOG / TECHNICAL WRITING SECTION
+========================================================== */
+
+#blog{
+    position:relative;
+    padding:120px 0;
+}
+
+/* ---------- Ideas & Insights tabs (Designs / Blog) ---------- */
+
+.ideas-tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:40px 0 50px;
+}
+
+.ideas-tab{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:1px solid var(--card-border);
+    background:var(--card);
+    color:var(--text);
+    padding:12px 26px;
+    border-radius:100px;
+    font-family:inherit;
+    font-weight:600;
+    font-size:.95rem;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.ideas-tab:hover{
+    color:var(--white);
+    border-color:var(--primary);
+}
+
+.ideas-tab.active{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    border-color:transparent;
+    color:#fff;
+}
+
+.ideas-panel{
+    display:none;
+}
+
+.ideas-panel.active{
+    display:block;
+    animation:phaseFade .5s ease;
+}
+
+@keyframes phaseFade{
+    from{ opacity:0; transform:translateY(16px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+/* ---------- Design cards ---------- */
+
+.design-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+}
+
+.design-card{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    transition:var(--transition);
+}
+
+.design-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.design-preview{
+    aspect-ratio:4/3;
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    transition:transform .4s ease;
+}
+
+.design-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.design-card:hover .design-preview{
+    transform:scale(1.04);
+}
+
+.design-card h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.1rem;
+}
+
+.design-card p{
+    color:var(--text);
+    font-size:.9rem;
+    flex:1;
+}
+
+.explore-btn i{
+    transition:transform .3s ease;
+}
+
+.design-card:hover .explore-btn i{
+    transform:translateX(4px);
+}
+
+/* ---------- Design detail modal ---------- */
+
+.design-modal-box{
+    display:block;
+    max-width:640px;
+    text-align:left;
+}
+
+.design-modal-gallery{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin:30px 0;
+
+}
+
+.design-modal-gallery img{
+
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:16px;
+    border:1px solid var(--card-border);
+
+}
+
+.design-modal-description{
+
+    color:var(--text);
+    line-height:1.8;
+    font-size:1rem;
+    margin-top:14px;
+    margin-bottom:24px;
+
+}
+
+
+.design-modal-gallery .img-placeholder{
+    aspect-ratio:1/1;
+}
+
+.design-modal-content h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.4rem;
+    margin:8px 0 4px;
+}
+
+.design-close-btn{
+    width:100%;
+}
+
+.blog-platforms{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.blog-platform-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:100px;
+    font-weight:600;
+    color:var(--white);
+    background:var(--card);
+    border:1px solid var(--card-border);
+    transition:var(--transition);
+}
+
+.blog-platform-btn:hover{
+    transform:translateY(-4px);
+    border-color:var(--primary);
+}
+
+.blog-platform-btn.medium i{ color:#ffffff; }
+.blog-platform-btn.wordpress i{ color:#21759b; }
+
+.blog-carousel-wrap{
+    position:relative;
+}
+
+.blog-single{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
+
+.blog-single .blog-card{
+    width:100%;
+    max-width:550px;
+}
+
+.blog-card{
+    flex:0 0 320px;
+    scroll-snap-align:start;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    transition:var(--transition);
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.blog-card-tag{
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--accent);
+}
+
+.blog-card h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.15rem;
+}
+
+.blog-card p{
+    color:var(--text);
+    font-size:.92rem;
+    line-height:1.7;
+    flex:1;
+}
+
+.blog-card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--primary);
+    font-weight:600;
+    font-size:.9rem;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.blog-card-link i{
+    transition:transform .3s ease;
+}
+
+.blog-card-link:hover i,
+.blog-card:hover .blog-card-link i{
+    transform:translateX(4px);
+}
+
+/* ---------- Article preview modal ---------- */
+
+.article-modal-box{
+    display:block;
+    max-width:520px;
+    text-align:left;
+}
+
+.article-modal-content h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.4rem;
+    margin:10px 0 6px;
+}
+
+.article-modal-date{
+    display:block;
+    color:var(--text);
+    font-size:.85rem;
+    margin-bottom:22px;
+}
+
+.article-modal-content > p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+#am-read-full{
+    width:100%;
+}
+
+.blog-nav{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:10px;
+}
+
+.blog-nav button{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid var(--card-border);
+    background:var(--card);
+    color:var(--white);
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.blog-nav button:hover{
+    background:var(--primary);
+    color:#fff;
+    border-color:var(--primary);
+}
+
+@media(max-width:900px){
+
+    .design-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .blog-card{
+        flex:0 0 82vw;
+    }
+
+    .design-modal-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .design-modal-gallery img{
+        height:200px;
+    }
+
+    .ideas-tabs{
+        flex-wrap:wrap;
+    }
+}

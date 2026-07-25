@@ -1,0 +1,132 @@
+/* ==========================================================
+   SHARED SCROLL-REVEAL UTILITIES
+   Paired with the tiny IntersectionObserver helper in
+   assets/js/main.js (adds .in-view when element is visible).
+========================================================== */
+
+.reveal-up{
+    opacity:0;
+    transform:translateY(36px);
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal-up.in-view{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.reveal-fade{
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+.reveal-fade.in-view{
+    opacity:1;
+}
+
+/* Stagger children of a revealed container */
+
+.reveal-stagger > *{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .6s ease, transform .6s ease;
+}
+
+.reveal-stagger.in-view > *{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.reveal-stagger.in-view > *:nth-child(1){ transition-delay:.05s; }
+.reveal-stagger.in-view > *:nth-child(2){ transition-delay:.12s; }
+.reveal-stagger.in-view > *:nth-child(3){ transition-delay:.19s; }
+.reveal-stagger.in-view > *:nth-child(4){ transition-delay:.26s; }
+.reveal-stagger.in-view > *:nth-child(5){ transition-delay:.33s; }
+.reveal-stagger.in-view > *:nth-child(6){ transition-delay:.4s; }
+
+/* Respect reduced motion preference */
+
+@media (prefers-reduced-motion: reduce){
+
+    .reveal-up,
+    .reveal-fade,
+    .reveal-stagger > *,
+    .reveal{
+        transition:none !important;
+        opacity:1 !important;
+        transform:none !important;
+    }
+}
+
+/* ==========================================================
+   SCROLL PROGRESS BAR
+========================================================== */
+
+#scroll-progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:3px;
+    width:0%;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    z-index:1000;
+    transition:width .1s linear;
+}
+
+/* ==========================================================
+   MAGNETIC BUTTONS
+   (JS moves the button toward the cursor; this just makes
+   the motion feel springy instead of stiff)
+========================================================== */
+
+.magnetic{
+    will-change:transform;
+    transition:transform .25s cubic-bezier(.33,1,.68,1);
+}
+
+/* ==========================================================
+   TILT CARDS
+   (JS sets --rx/--ry per mouse position; transform reads them)
+========================================================== */
+
+.tilt-card{
+    --rx:0deg;
+    --ry:0deg;
+    transform:perspective(800px) rotateX(var(--rx)) rotateY(var(--ry));
+    transition:transform .4s cubic-bezier(.22,1,.36,1);
+    will-change:transform;
+}
+
+/* ==========================================================
+   BUTTON RIPPLE
+========================================================== */
+
+.btn-primary,
+#say-hello-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    transform:scale(0);
+    animation:rippleAnim .6s ease-out;
+    pointer-events:none;
+}
+
+@keyframes rippleAnim{
+    to{
+        transform:scale(2.6);
+        opacity:0;
+    }
+}
+
+/* ==========================================================
+   ANIMATED STAT COUNTERS
+========================================================== */
+
+.stat-card h2{
+    font-variant-numeric:tabular-nums;
+}

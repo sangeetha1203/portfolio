@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sangeetha R | AI Developer & Software Engineer</title>
+
+    <meta name="description"
+        content="Portfolio of Sangeetha R — AI Developer, Full Stack Software Engineer and Machine Learning enthusiast building products end-to-end, from problem to deployment.">
+    <meta name="keywords"
+        content="Sangeetha, Portfolio, AI Developer, Full Stack Developer, Software Engineer, Machine Learning, Automation">
+    <meta name="author" content="Sangeetha R">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sangeetha R | AI Developer & Software Engineer">
+    <meta property="og:description" content="AI Developer & Full Stack Engineer building products from idea to deployment.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sangeetha R | Software Engineer & AI Developer">
+    <meta name="twitter:description" content="AI Developer & Full Stack Engineer building products from idea to deployment.">
+
+    <link rel="icon" href="assets/images/profile.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/process.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <div class="mouse-glow"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring ring1"></div>
+            <div class="loader-ring ring2"></div>
+            <div class="loader-ring ring3"></div>
+            <div class="loader-logo"><span>S</span></div>
+            <h2 class="loader-name">Sangeetha</h2>
+            <p class="loader-role">AI Developer • Software Engineer</p>
+            <div class="loader-progress">
+                <div class="loader-bar"><div id="loader-fill"></div></div>
+                <span id="loader-percent">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ============================ Navigation ============================ -->
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+
+                <a href="#home" class="logo"><span class="logo-gradient">S</span>angeetha</a>
+
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Ideas</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <a href="assets/resume/SANGEETHA R_resume.pdf" class="resume-btn" download>Resume</a>
+
+                <div id="menu-btn">
+                    <span></span><span></span><span></span>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================ HERO ============================ -->
+        <section id="home">
+
+            <div class="aurora-bg">
+                <div class="blob blob1"></div>
+                <div class="blob blob2"></div>
+                <div class="blob blob3"></div>
+            </div>
+
+            <canvas id="particles-canvas"></canvas>
+
+            <div class="container hero-container">
+
+                <div class="hero-left">
+
+                    <p class="hero-small">👋 Hello, I'm</p>
+                    <h1 class="hero-title">Sangeetha <span>R</span></h1>
+                    <h2 class="hero-heading">Building Software & AI Systems<br>That Solve Real Problems.</h2>
+
+                    <div class="typing-wrapper">
+                        <span class="typing-prefix">I am a</span>
+                        <span id="typing"></span>
+                        <span class="cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        I build complete software products - from backend architecture and
+                        APIs to machine learning models and data pipelines - and ship them
+                        with enough attention to usability that people actually want to use them.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                        <a href="assets/resume/resume.pdf" download class="btn btn-secondary">Download Resume</a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://github.com/sangeetha1203" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sangeetha-r-78a70b2b2" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://medium.com/@rsangeethar126" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                        <a href="mailto:rsangeethar126@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="hero-right">
+                    <div class="profile-wrapper">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring"></div>
+                        <img src="assets/images/profile.svg" alt="Sangeetha R" class="profile-image">
+
+                        <div class="floating python">Python</div>
+                        <div class="floating java">Java</div>
+			<div class="floating C"> C </div>
+                        <div class="floating react">React</div>
+                        <div class="floating flask">Flask</div>
+                        <div class="floating ai">AI</div>
+                        <div class="floating SQL">SQL</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator"><span></span><p>Scroll</p></div>
+
+        </section>
+
+        <!-- ============================ ABOUT ============================ -->
+        <section id="about">
+
+            <div class="about-bg">
+                <div class="about-circle circle-one"></div>
+                <div class="about-circle circle-two"></div>
+            </div>
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2>Turning Ideas into <span class="text-gradient">Intelligent Products</span></h2>
+                    <p>Passionate about designing and developing AI-powered software that solves
+                       real-world problems through innovation, creativity, and user-centered thinking.</p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-left">
+                        <div class="about-image-card glass">
+                            <img src="assets/images/about.jpeg" alt="Sangeetha R" class="about-image">
+                            <div class="experience-badge">
+                                <h4>Focus on Logics</h4>
+                                <span>Years of Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-right">
+                        <h3>Hi, I'm Sangeetha 👋</h3>
+                        <p>I am an aspiring Software Engineer and AI Developer passionate about
+                           building full stack applications, machine learning systems, and
+                           data-driven products.</p>
+                        <p>I enjoy taking ideas from architecture to deployment. My projects focus
+                           on solving practical problems with clean, well-structured code — with
+                           enough UX judgment to make what I build genuinely usable.</p>
+
+                        <div class="about-info">
+                            <div class="info-card glass tilt-card"><i class="fas fa-code"></i><h4>Full Stack</h4></div>
+                            <div class="info-card glass tilt-card"><i class="fas fa-brain"></i><h4>AI & ML</h4></div>
+                            <div class="info-card glass tilt-card"><i class="fas fa-terminal"></i><h4>Software Developer </h4></div>
+                            <div class="info-card glass tilt-card"><i class="fas fa-shield-halved"></i><h4>Security</h4></div>
+                        </div>
+
+                        <a href="assets/resume/SANGEETHA R_resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================ PROCESS ============================ -->
+        <section id="process">
+            <div class="container">
+
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Process</span>
+                    <h2>How I <span class="text-gradient">Think & Build</span></h2>
+                    <p>From the tools I reach for to the way I take an idea to a shipped product.</p>
+                </div>
+
+                <div class="phase-tabs reveal-up">
+                    <button class="phase-tab active" data-phase="toolkit">Engineering Toolkit</button>
+                    <button class="phase-tab" data-phase="build">How I Build Products</button>
+                </div>
+
+                <!-- ===== Phase 1 : Engineering Toolkit ===== -->
+                <div class="phase-panel active" id="phase-toolkit">
+
+                    <p class="phase-intro">Each technology below appears as a clean badge — hover to see it react.</p>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🧩</div>
+                            <h3>Languages</h3>
+                            <div class="tech-list">
+                                <span>Python</span><span>Java</span> <span> C </span><span>Node.js</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🌐</div>
+                            <h3>Frontend</h3>
+                            <div class="tech-list">
+                                <span>HTML5</span><span>CSS3</span><span>React</span>
+                                <span>Bootstrap</span><span>Vite</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">⚙️</div>
+                            <h3>Backend</h3>
+                            <div class="tech-list">
+                                <span>Flask</span><span>FastAPI</span><span>Spring Boot</span><span>REST API</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🤖</div>
+                            <h3>AI / Machine Learning</h3>
+                            <div class="tech-list">
+                                <span>OpenCV</span><span>MediaPipe</span><span>NumPy</span>
+                                <span>Pandas</span><span>Scikit-learn</span><span>TensorFlow</span><span>NLP</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🗄️</div>
+                            <h3>Databases</h3>
+                            <div class="tech-list"><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🛠️</div>
+                            <h3>Tools & Platforms</h3>
+                            <div class="tech-list">
+                                <span>Git</span><span>GitHub</span><span>VS Code</span>
+                                <span>Eclipse</span><span>Docker</span><span>Postman</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card glass tilt-card">
+                            <div class="skill-icon">🎨</div>
+                            <h3>Tech Design</h3>
+                            <div class="tech-list">
+                                <span>User Experience</span><span>Tech Stack</span>
+                                <span>System Architecture</span><span>Feasible &amp; Scalable</span><span>Figma</span>
+                            </div>
+                        </div>
+
+			<div class="skill-card glass tilt-card">
+    				<div class="skill-icon">☁️</div>
+    				<h3>Cloud</h3>
+    				<div class="tech-list">
+        			<span>AWS</span>
+				<span> EC2 </span>
+				<span>S3</span>
+        			<span>IAM</span>
+    				</div>
+			</div>
+
+                    </div>
+                </div>
+
+                <!-- ===== Phase 2 : How I Build Products ===== -->
+                <div class="phase-panel" id="phase-build">
+
+                    <p class="phase-intro">I don't just write code — I use design thinking to find real
+                       problems and build practical solutions, then ship and improve them. Tap a step to read more.</p>
+
+                    <div class="process-timeline">
+
+                        <div class="process-step">
+                            <div class="step-icon">💡</div>
+                            <div class="step-body">
+                                <h3>Understand the Problem <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Identifying the real pain point before writing a line of code.</p>
+                                <div class="step-detail">
+                                    <p>I begin by understanding the real problem, identifying user pain
+                                       points, and defining clear objectives before writing code.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-icon">🔍</div>
+                            <div class="step-body">
+                                <h3>Research Users <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Understanding how people will actually interact with the product.</p>
+                                <div class="step-detail">
+                                    <p>I think about how users interact with the product, what challenges
+                                       they face, and how the experience can be made simpler and more intuitive.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-icon">✏️</div>
+                            <div class="step-body">
+                                <h3>Design the Experience <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Sketching flows and UI concepts to validate ideas early.</p>
+                                <div class="step-detail">
+                                    <p>I create simple UI concepts and user flows to validate ideas before
+                                       implementation, focusing on usability rather than visual complexity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-icon">⚙️</div>
+                            <div class="step-body">
+                                <h3>Build the Solution <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Turning the plan into a working, scalable product.</p>
+                                <div class="step-detail">
+                                    <p>I develop scalable applications using modern technologies, integrating
+                                       frontend, backend, databases, and AI models where appropriate.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-icon">🧪</div>
+                            <div class="step-body">
+                                <h3>Test & Improve <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Refining based on real testing, not assumptions.</p>
+                                <div class="step-detail">
+                                    <p>I continuously refine features based on testing, debugging, and
+                                       performance improvements to create a more reliable product.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-icon">🚀</div>
+                            <div class="step-body">
+                                <h3>Deploy & Iterate <i class="fas fa-chevron-down"></i></h3>
+                                <p class="step-preview">Shipping it, then improving it with real feedback.</p>
+                                <div class="step-detail">
+                                    <p>I deploy applications, monitor results, gather feedback, and continue
+                                       improving the product through iterative development.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================ EXPERIENCE ============================ -->
+        <section id="experience">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Experience</span>
+                    <h2>Learning Through <span class="text-gradient">Real Projects</span></h2>
+                    <p>My experience comes from designing, building, testing, and improving
+                       software products across AI, web development, and user experience.</p>
+                </div>
+
+                <div class="experience-grid">
+
+                    <div class="experience-card glass tilt-card">
+                        <div class="experience-icon">💻</div>
+                        <h3>Software Development</h3>
+                        <p>Building responsive web applications using Java, Spring Boot, React,
+                           Flask, FastAPI, and RESTful APIs.</p>
+                    </div>
+
+                    <div class="experience-card glass tilt-card">
+                        <div class="experience-icon">🤖</div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Developing AI applications using Computer Vision, OpenCV, MediaPipe,
+                           Machine Learning, and NLP.</p>
+                    </div>
+
+                    <div class="experience-card glass tilt-card">
+                        <div class="experience-icon">🚀</div>
+                        <h3>Current Focus</h3>
+                        <p>Building AI-powered software products, strengthening full-stack
+                           development, and preparing for software engineering roles.</p>
+                    </div>
+
+                </div>
+
+                <!-- ===== Internships ===== -->
+                <div class="internships">
+
+                    <h3 class="internships-title">Internships</h3>
+
+                    <div class="internship-carousel">
+
+                        <button class="internship-card glass tilt-card"
+                            data-company="Cognifyz Technologies"
+                            data-role="Software Developer Intern"
+                            data-domain="Software Developer"
+                            data-duration="4 Weeks"
+                            data-gained="Worked on building and testing modules six Python console applications utilizing data structures and automation. Developed a persistent   CRUD data tool and a multi-threaded HTML web scraper.">
+                            <span class="internship-icon">💻</span>
+                            <h4>Software Development Intern</h4>
+                            <span class="internship-company">Cognifyz Technologies</span>
+                        </button>
+
+                        <button class="internship-card glass tilt-card"
+                            data-company="LayerCodes Technologies"
+                            data-role="Web Development and Digital Marketing Intern"
+                            data-domain="Web Development and Digital Marketing"
+                            data-duration="4 Weeks"
+                            data-gained="Gained hands on experience in digital marketing and web development. Built a professional understanding of domain, SEO, server infrastructure, cloud systems and AI applications.">
+                            <span class="internship-icon">🌐</span>
+                            <h4>Web Development and Digital Marketing Intern</h4>
+                            <span class="internship-company">LayerCodes Technologies</span>
+                        </button>
+
+                        <button class="internship-card glass tilt-card"
+                            data-company="Cloud Technologies"
+                            data-role="Web Development Intern"
+                            data-domain="Web Development"
+                            data-duration="4 Weeks"
+                            data-gained="Acquired hands on experience in web development, specializing in front-end designs, 
+Implementation frameworks, and the integration of cloud technologies within a web environment.">
+                            <span class="internship-icon">📈</span>
+                            <h4>Web Development Intern</h4>
+                            <span class="internship-company">Cloud Technologies</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================ PROJECTS ============================ -->
+        <section id="projects">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Featured Projects</span>
+                    <h2>Things I've <span class="text-gradient">Built</span></h2>
+                    <p>A collection of AI, Full-Stack, and Software Engineering projects focused
+                       on solving real-world problems with modern technologies.</p>
+                </div>
+
+                <div class="project-tabs">
+                    <button class="project-tab active" data-project="styleai">StyleAI</button>
+                    <button class="project-tab" data-project="empathai">EmpathAI</button>
+                    <button class="project-tab" data-project="blockchain">Blockchain</button>
+                    <button class="project-tab" data-project="youtube">YouTube AI</button>
+                    <button class="project-tab" data-project="batterkart">BatterKart</button>
+                    <button class="project-tab" data-project="medconnect">MedConnect</button>
+                </div>
+
+                <div id="project-container"><!-- Rendered by assets/js/projects.js --></div>
+
+            </div>
+        </section>
+
+        <!-- ============================ IDEAS & INSIGHTS ============================ -->
+        <section id="blog">
+            <div class="container">
+
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Ideas & Insights</span>
+                    <h2>How I <span class="text-gradient">Think & Learn</span></h2>
+                    <p>I enjoy exploring ideas, documenting technical learnings, and designing
+                       practical user experiences before building them.</p>
+                </div>
+
+                <div class="ideas-tabs reveal-up">
+                    <button class="ideas-tab active" data-ideas="designs"><i class="fas fa-diagram-project"></i> Design Thinking</button>
+                    <button class="ideas-tab" data-ideas="posts"><i class="fas fa-pen-nib"></i> Articles</button>
+                </div>
+
+                <!-- ===== Design Thinking Tab ===== -->
+                <div class="ideas-panel active" id="ideas-designs">
+
+                    <div class="design-grid">
+
+                        <article class="design-card glass tilt-card"
+                            data-title="StyleAI UI Design"
+                            data-description="A modern virtual try-on interface designed for a smooth
+                                shopping experience. The layout focuses on quick garment selection,
+                                live preview, and a clean user experience."
+                            data-img1="assets/images/designs/styleai/design1.jpeg"
+                            data-img2="assets/images/designs/styleai/design2.jpeg">
+                            <div class="design-preview">
+                                <img src="assets/images/designs/styleai/design1.jpeg" alt="StyleAI UI">
+                            </div>
+                            <h3>StyleAI UI Design</h3>
+                            <p>AI-powered virtual fashion try-on interface.</p>
+                            <button class="btn btn-secondary explore-btn" type="button">
+                                Preview <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </article>
+
+                        <article class="design-card glass tilt-card"
+                            data-title="Grocery App UI Design"
+                            data-description="A clean, browse-first grocery shopping interface that
+                                keeps categories, search, and cart always within reach — designed to
+                                get from craving to cart in as few taps as possible."
+                            data-img1="assets/images/designs/Grocery app/design1.jpeg"
+                            data-img2="assets/images/designs/Grocery app/design2.jpeg">
+                            <div class="design-preview">
+                                <img src="assets/images/designs/Grocery app/design1.jpeg" alt="Grocery App UI">
+                            </div>
+                            <h3>Grocery App UI Design</h3>
+                            <p>Browse-first grocery shopping interface.</p>
+                            <button class="btn btn-secondary explore-btn" type="button">
+                                Preview <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </article>
+
+                        <article class="design-card glass tilt-card"
+                            data-title="Food App UI Design"
+                            data-description="A visual-first food ordering interface built around fast
+                                menu browsing, a sticky cart summary, and one-tap reordering for
+                                dishes people order often."
+                            data-img1="assets/images/designs/food app/design1.jpeg"
+                            data-img2="assets/images/designs/food app/design2.jpeg">
+                            <div class="design-preview">
+                                <img src="assets/images/designs/food app/design1.jpeg" alt="Food App UI">
+                            </div>
+                            <h3>Food App UI Design</h3>
+                            <p>Visual-first food ordering interface.</p>
+                            <button class="btn btn-secondary explore-btn" type="button">
+                                Preview <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ===== Articles Tab ===== -->
+                <div class="ideas-panel" id="ideas-posts">
+
+                    <div class="blog-platforms">
+                        <a href="https://wordpress.com/home/techdailysangeetha.wordpress.com" target="_blank" rel="noopener" class="blog-platform-btn wordpress">
+                            <i class="fab fa-wordpress"></i> WordPress
+                        </a>
+                        <a href="https://medium.com/@rsangeethar126" target="_blank" rel="noopener" class="blog-platform-btn medium">
+                            <i class="fab fa-medium"></i> Medium
+                        </a>
+                    </div>
+
+                    <div class="blog-carousel-wrap">
+                        <div class="blog-single">
+
+                            <article class="blog-card glass tilt-card"
+                                data-title="Behind Every “Hello World” Is a Silent Struggle ✨"
+                                data-date="March 2026"
+                                data-preview="For many beginners, the first encounter with coding feels exciting. There is curiosity, motivation, and a spark of confidence. Watching the screen respond to something you typed creates a strange but beautiful satisfaction."
+                                data-url="https://medium.com/@rsangeethar126">
+                                <span class="blog-card-tag">My Technical Writing</span>
+                                <h3>Explore My Articles</h3>
+                                <p>A collection of articles where I share project experiences, development practices, technical insights, and emerging technologies.</p>
+                                <button class="blog-card-link" type="button">
+                                    Read Preview <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </article>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================ OPEN TO OPPORTUNITIES ============================ -->
+        <section id="opportunities">
+            <div class="container">
+                <div class="opportunities-banner glass reveal-up">
+                    <p>Open to <span>Software Engineering</span>, <span>AI</span>,
+                       <span>Full Stack</span>, and <span>Product Development</span> opportunities.</p>
+                    <div class="role-tags">
+                        <span>AI Engineer</span>
+                        <span>Software Engineer</span>
+                        <span>Full Stack Developer</span>
+                        <span>Backend Developer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ CONTACT ============================ -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box glass reveal-up">
+                    <h2>Let's Build Something Together</h2>
+                    <p>Whether it's AI,Software Applications,  Full Stack Development, or a product idea,
+                       I'd love to hear from you.</p>
+                    <button id="say-hello-btn" class="btn btn-primary magnetic">👋 Say Hello</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================ Internship Detail Modal ============================ -->
+    <div class="modal-overlay" id="internship-modal">
+        <div class="modal-box internship-modal-box">
+
+            <button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+
+            <div class="internship-modal-content">
+                <span class="internship-modal-icon" id="im-icon">💻</span>
+                <h3 id="im-role">Role</h3>
+                <span class="internship-modal-company" id="im-company">Company</span>
+
+                <ul class="internship-meta">
+                    <li><span>Domain</span><strong id="im-domain">—</strong></li>
+                    <li><span>Duration</span><strong id="im-duration">—</strong></li>
+                </ul>
+
+                <div class="internship-gained">
+                    <span class="story-label">What I Gained</span>
+                    <p id="im-gained">—</p>
+                </div>
+
+                <button class="btn btn-secondary internship-close-btn" type="button">Close</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================ Design Detail Modal ============================ -->
+<div class="modal-overlay" id="design-modal">
+
+    <div class="modal-box design-modal-box">
+
+        <button class="modal-close" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="design-modal-content">
+
+            <h3 id="dm-title">Design Title</h3>
+
+            <p id="dm-description" class="design-modal-description">
+                Short description...
+            </p>
+
+            <div class="design-modal-gallery">
+
+                <img id="dm-img1" alt="Design image 1">
+                <img id="dm-img2" alt="Design image 2">
+
+            </div>
+
+            <button class="btn btn-secondary design-close-btn" type="button">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- ============================ Article Preview Modal ============================ -->
+    <div class="modal-overlay" id="article-modal">
+        <div class="modal-box article-modal-box">
+
+            <button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+
+            <div class="article-modal-content">
+                <span class="blog-card-tag" id="am-tag">—</span>
+                <h3 id="am-title">—</h3>
+                <span class="article-modal-date" id="am-date">—</span>
+
+                <p id="am-preview">—</p>
+
+                <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="am-read-full">
+                    Read Full Article <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================ Say Hello Modal ============================ -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-box">
+
+            <button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+
+            <div class="modal-form">
+                <h3>👋 Say Hello</h3>
+                <p>Let's discuss ideas, projects, or opportunities.</p>
+
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="cf-name">Name</label>
+                        <input type="text" id="cf-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="form-success">
+                    <h4>✅ Thank you!</h4>
+                    <p>Your message has been sent. I'll get back to you as soon as possible.</p>
+                </div>
+            </div>
+
+            <div class="modal-connect">
+                <h4>Or connect with me</h4>
+                <ul class="connect-links">
+                    <li><a href="https://github.com/sangeetha1203" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/sangeetha-r-78a70b2b2/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="mailto:rsangeethar126@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                    <li><a href="assets/resume/SANGEETHA R_resume.pdf" download><i class="fas fa-file-arrow-down"></i> Resume</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================ Footer ============================ -->
+    <footer>
+        <div class="footer-inner">
+
+            <a href="#home" class="logo"><span class="logo-gradient">S</span>angeetha</a>
+
+            <div class="footer-social">
+                <a href="https://github.com/sangeetha1203" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sangeetha-r-78a70b2b2" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@rsangeethar126" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                <a href="mailto:rsangeethar126@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <p>© 2026 Sangeetha R. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========================= Libraries (self-hosted — see assets/vendor/) ========================= -->
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/lenis.min.js"></script>
+
+    <!-- ========================= Data ========================= -->
+    <script src="projects-data.js"></script>
+
+    <!-- ========================= App Scripts ========================= -->
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/typing.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/skills.js"></script>
+    <script src="assets/js/experience.js"></script>
+    <script src="assets/js/projects.js"></script>
+    <script src="assets/js/process.js"></script>
+    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

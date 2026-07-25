@@ -1,0 +1,288 @@
+/* ==========================================================
+   EXPERIENCE SECTION
+========================================================== */
+
+#experience{
+
+    position:relative;
+
+    padding:120px 0;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.experience-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.experience-card{
+
+    padding:40px;
+
+    border-radius:22px;
+
+    transition:.35s ease;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.experience-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 15px 35px rgba(47,111,237,.15);
+
+}
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.experience-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    background:rgba(47,111,237,.08);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.experience-card h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:18px;
+
+}
+
+.experience-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    #experience{
+
+        padding:90px 0;
+
+    }
+
+    .experience-card{
+
+        padding:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .experience-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.6rem;
+
+    }
+
+    .experience-card h3{
+
+        font-size:1.2rem;
+
+    }
+
+}
+/* ==========================================================
+   INTERNSHIPS
+========================================================== */
+
+.internships{
+    margin-top:70px;
+}
+
+.internships-title{
+    text-align:center;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.5rem;
+    margin-bottom:36px;
+}
+
+.internship-carousel{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    padding:6px 4px 20px;
+    scroll-snap-type:x mandatory;
+}
+
+.internship-card{
+    flex:0 0 300px;
+    scroll-snap-align:start;
+    text-align:left;
+    padding:30px;
+    cursor:pointer;
+    transition:var(--transition);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.internship-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+.internship-icon{
+    font-size:1.8rem;
+}
+
+.internship-card h4{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.05rem;
+    line-height:1.4;
+}
+
+.internship-company{
+    color:var(--primary);
+    font-weight:600;
+    font-size:.88rem;
+}
+
+/* ---------- Internship Detail Modal ---------- */
+
+.internship-modal-box{
+    display:block;
+    text-align:center;
+    max-width:520px;
+}
+
+.internship-modal-icon{
+    font-size:2.6rem;
+    display:block;
+    margin-bottom:14px;
+}
+
+.internship-modal-content h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.5rem;
+    margin-bottom:6px;
+}
+
+.internship-modal-company{
+    display:block;
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:26px;
+}
+
+.internship-meta{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-bottom:26px;
+    padding-bottom:26px;
+    border-bottom:1px solid var(--card-border);
+}
+
+.internship-meta li{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.internship-meta li span{
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--text);
+}
+
+.internship-meta li strong{
+    color:var(--white);
+}
+
+.internship-gained{
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.internship-gained p{
+    color:var(--text);
+    line-height:1.8;
+    margin-top:12px;
+}
+
+.internship-close-btn{
+    width:100%;
+}
+
+@media(max-width:600px){
+
+    .internship-card{
+        flex:0 0 84vw;
+    }
+
+    .internship-meta{
+        gap:24px;
+    }
+}

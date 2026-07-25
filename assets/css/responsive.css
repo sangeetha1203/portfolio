@@ -1,0 +1,40 @@
+/* ==========================================================
+   GLOBAL RESPONSIVE ADJUSTMENTS
+   Section-specific responsive rules already live in each
+   section's own CSS file. This file covers cross-cutting
+   layout and typography scaling.
+========================================================== */
+
+@media(max-width:1024px){
+
+    section{
+        padding:90px 6%;
+    }
+}
+
+@media(max-width:768px){
+
+    section{
+        padding:70px 24px;
+    }
+
+    .section-header h2{
+        font-size:1.9rem;
+    }
+
+    .btn{
+        padding:13px 26px;
+        font-size:.9rem;
+    }
+}
+
+@media(max-width:480px){
+
+    section{
+        padding:60px 18px;
+    }
+
+    .project-tabs{
+        border-radius:20px;
+    }
+}

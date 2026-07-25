@@ -1,0 +1,72 @@
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+    padding:40px 8% 30px;
+    border-top:1px solid var(--card-border);
+}
+
+.footer-inner{
+    width:min(1300px,100%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.footer-inner .logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:1.1rem;
+    color:var(--white);
+}
+
+.footer-inner .logo-gradient{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.footer-social{
+    display:flex;
+    gap:16px;
+}
+
+.footer-social a{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--card);
+    border:1px solid var(--card-border);
+    color:var(--text);
+    transition:var(--transition);
+}
+
+.footer-social a:hover{
+    color:#fff;
+    background:var(--primary);
+    border-color:var(--primary);
+    transform:translateY(-4px);
+}
+
+.footer-inner p{
+    color:var(--text);
+    font-size:.85rem;
+    width:100%;
+    text-align:center;
+    order:3;
+}
+
+@media(max-width:600px){
+
+    .footer-inner{
+        justify-content:center;
+        text-align:center;
+    }
+}
